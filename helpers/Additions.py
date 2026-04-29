@@ -1,3 +1,5 @@
+#%pip install rich
+
 from rich.console import Console
 from rich.markdown import Markdown
 import builtins
