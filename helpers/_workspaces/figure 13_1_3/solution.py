@@ -1,1 +1,82 @@
-class Item:\n    def __init__(self):\n        self.name = ""\n        self.quantity = 0\n\n    def set_name(self, nm):\n        self.name = nm\n\n    def set_quantity(self, qnty):\n        self.quantity = qnty\n\n    def display(self):\n        print(self.name, self.quantity)\n\nclass Book(Item):\n    def __init__(self):\n        Item.__init__(self)\n        self.title = ""\n\n    def set_title(self, ttl):\n        self.title = ttl\n\n    def get_title(self):\n        return self.title\n\nclass Textbook(Book):\n    def __init__(self):\n        Book.__init__(self)\n        self.edition = ""\n\n    def set_edition(self, edition):\n        self.edition = edition\n\n    def get_edition(self):\n        return self.edition\n\nclass Audiobook(Book):\n    def __init__(self):\n        Book.__init__(self)\n        self.reader = ""\n\n    def set_reader(self, reader):\n        self.reader = reader\n\n    def get_reader(self):\n        return self.reader\n\nclass Produce(Item):\n    def __init__(self):\n        Item.__init__(self)\n        self.expiration = ""\n\n    def set_expiration(self, expir):\n        self.expiration = expir\n\n    def get_expiration(self):\n        return self.expiration\n\n\n\nclass Fruit(Produce):\n    def __init__(self):\n        Produce.__init__(self)\n        self.has_seeds = True\n\n    def set_has_seeds(self, sds):\n        self.has_seeds = sds\n\n    def get_has_seeds(self):\n        return self.has_seeds\n\n\nclass Dairy(Produce):\n    def __init__(self):\n        Produce.__init__(self)\n        self.percent_fat = 3\n\n    def set_percent_fat(self, percent_fat):\n        self.percent_fat = percent_fat\n\n    def get_percent_fat(self):\n        return self.percent_fat
+class Item:
+    def __init__(self):
+        self.name = ""
+        self.quantity = 0
+
+    def set_name(self, nm):
+        self.name = nm
+
+    def set_quantity(self, qnty):
+        self.quantity = qnty
+
+    def display(self):
+        print(self.name, self.quantity)
+
+class Book(Item):
+    def __init__(self):
+        Item.__init__(self)
+        self.title = ""
+
+    def set_title(self, ttl):
+        self.title = ttl
+
+    def get_title(self):
+        return self.title
+
+class Textbook(Book):
+    def __init__(self):
+        Book.__init__(self)
+        self.edition = ""
+
+    def set_edition(self, edition):
+        self.edition = edition
+
+    def get_edition(self):
+        return self.edition
+
+class Audiobook(Book):
+    def __init__(self):
+        Book.__init__(self)
+        self.reader = ""
+
+    def set_reader(self, reader):
+        self.reader = reader
+
+    def get_reader(self):
+        return self.reader
+
+class Produce(Item):
+    def __init__(self):
+        Item.__init__(self)
+        self.expiration = ""
+
+    def set_expiration(self, expir):
+        self.expiration = expir
+
+    def get_expiration(self):
+        return self.expiration
+
+
+
+class Fruit(Produce):
+    def __init__(self):
+        Produce.__init__(self)
+        self.has_seeds = True
+
+    def set_has_seeds(self, sds):
+        self.has_seeds = sds
+
+    def get_has_seeds(self):
+        return self.has_seeds
+
+
+class Dairy(Produce):
+    def __init__(self):
+        Produce.__init__(self)
+        self.percent_fat = 3
+
+    def set_percent_fat(self, percent_fat):
+        self.percent_fat = percent_fat
+
+    def get_percent_fat(self):
+        return self.percent_fat
